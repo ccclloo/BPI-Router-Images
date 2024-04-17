@@ -224,6 +224,9 @@ sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends 
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wireless-tools"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wpasupplicant"
 
+sudo chroot $targetdir bash -c "echo 'deb http://deb.debian.org/debian bullseye main' >> /etc/apt/sources.list"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y asterisk"
+
 #install/start resolved after all is done
 sudo chroot $targetdir bash -c "apt install -y systemd-resolved;systemctl enable systemd-resolved"
 
