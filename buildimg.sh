@@ -218,7 +218,7 @@ sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends 
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y macchanger"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y minicom"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y tio"
-sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y shark"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y tshark"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y tftpd-hpa"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y vsftpd"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wireless-tools"
