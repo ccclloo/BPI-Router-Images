@@ -210,6 +210,20 @@ if [[ ${board} != "bpi-r2pro" ]];then
 	fi
 fi
 
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y curl"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y ethtool"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y gcc"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y i2c-tools"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y iperf3"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y macchanger"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y minicom"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y tio"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y shark"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y tftpd-hpa"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y vsftpd"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wireless-tools"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wpasupplicant"
+
 #install/start resolved after all is done
 sudo chroot $targetdir bash -c "apt install -y systemd-resolved;systemctl enable systemd-resolved"
 
